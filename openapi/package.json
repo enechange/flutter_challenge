@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@openapitools/openapi-generator-cli": "^2.10.0"
-  },
-  "scripts": {
-    "generate-http": "rm -rf dist_http && openapi-generator generate -i ./definitions/charger_spots.yml -g dart --model-name-prefix=API -o dist_http"
-  }
-}

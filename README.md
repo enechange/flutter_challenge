@@ -60,27 +60,12 @@ Flutterで充電スポットマップ画面を作成してください。
   - **セキュリティの観点からキーはコミットしないようご注意ください**
 - [geolocator](https://pub.dev/packages/geolocator)
 
-### 充電スポット一覧API
+### 充電スポットデータ
+マップに表示する充電スポットデータは [charger_spots_repository.dart](lib/charger_spots_repository.dart) を使用して取得してください
 
-#### Repositoryクラス
-- API実行については [charger_spots_repository.dart](lib/charger_spots_repository.dart) を用意していますので、適宜ご活用ください
-
-#### API Keyの取得、設定
-- APIに必要な認証トークン `X-EVENE-NATIVE-API-TOKEN` は別途お伝えいたします
-  - **ただし、セキュリティの観点からキーはコミットしないようお願いします。**
-- API KeyはRepositoryクラス内部の `apiKey` に仮定義していますので、適宜書き換えてください
-
-#### API詳細
-- 詳細は[API仕様書](https://stg.evene.jp/apidocs/charger_spots#/charger_spots)をご確認ください
-- モデルクラスなどの詳細を確認したい場合は　[guide_api_sdk](docs/guide_api_sdk.md) を参照ください
-
-#### 課題内部でのAPI使用方法
-- リクエスト: 本課題では緯度経度パラメータ（`sw_lat`,`sw_lng`,`ne_lat`,`ne_lng`）のみを使用します
-- レスポンス: 本課題でメインで使用するものを紹介します
-  - `images`: スポットのサムネイル表示に使用します
-  - `charger_devices`: カード情報やマーカーのスポット数の計算のために使用します
-  - `charger_spot_service_times`: カード内の「営業中/営業時間外」項目で使用します
-  - (`gogoev` と記載のあるパラメーターがいくつかありますが、本課題では使用しません)
+- 充電スポット情報の詳細は [charger_spot.dart](lib/charger_spot.dart) のドキュメントコメントを参照してください
+- 取得できる充電スポットは関東エリアにのみ存在しています
+  
 
 ### GoogleMapの設定方法
 
