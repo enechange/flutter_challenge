@@ -7,7 +7,6 @@ import 'package:flutter_map_app/screens/charger_spots/widgets/atom/charger_spot_
 import 'package:flutter_map_app/screens/charger_spots/widgets/atom/charger_spot_name_item.dart';
 import 'package:flutter_map_app/screens/charger_spots/widgets/atom/charger_spot_service_time_item.dart';
 import 'package:flutter_map_app/screens/charger_spots/widgets/atom/launch_googlemap_button.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:openapi/api.dart';
 import 'package:url_launcher/url_launcher.dart';
 
