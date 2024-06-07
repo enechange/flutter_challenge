@@ -1,6 +1,6 @@
 # 準備
 APIキーをapi_keysという別ファイル管理にする運用にしています
-api_keysの中身は以下です
+api_keysの形式は以下なので適当に変更してください
 ```text
 SERVER_API_KEY=''
 GOOGLE_MAP_API_KEY=''
