@@ -12,12 +12,12 @@ class AppRoot extends StatefulWidget {
 }
 
 class _AppRootState extends State<AppRoot> {
-
   @override
   void initState() {
     //
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return const ChargerSpots();

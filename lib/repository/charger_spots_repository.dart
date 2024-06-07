@@ -13,10 +13,10 @@ abstract class BaseChargerSpotsRepository {
   });
 }
 
-final chargerSpotsRepositoryProvider = Provider.autoDispose<BaseChargerSpotsRepository>((ref) => ChargerSpotsRepository());
+final chargerSpotsRepositoryProvider =
+    Provider.autoDispose<BaseChargerSpotsRepository>((ref) => ChargerSpotsRepository());
 
 class ChargerSpotsRepository implements BaseChargerSpotsRepository {
-
   @override
   Future<APIResponse?> getChargerSpots({
     required String swLat,

@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ProviderScope(
-          overrides: [
-            baseChargerSpotsRepository.overrideWith((ref) => ref.read(chargerSpotsRepositoryProvider)),
-          ],
+      overrides: [
+        baseChargerSpotsRepository.overrideWith((ref) => ref.read(chargerSpotsRepositoryProvider)),
+      ],
       child: MaterialApp(
         title: 'Flutter Map App',
         theme: ThemeData(

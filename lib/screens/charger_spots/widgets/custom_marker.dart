@@ -11,7 +11,8 @@ Future<Uint8List> createCustomMarkerWithNumber(int number) async {
   final ui.Image baseImage = fi.image;
 
   final pictureRecorder = ui.PictureRecorder();
-  final canvas = Canvas(pictureRecorder, Rect.fromPoints(Offset(0, 0), Offset(baseImage.width.toDouble(), baseImage.height.toDouble())));
+  final canvas = Canvas(
+      pictureRecorder, Rect.fromPoints(Offset(0, 0), Offset(baseImage.width.toDouble(), baseImage.height.toDouble())));
 
   canvas.drawImage(baseImage, const Offset(0, 0), Paint());
 

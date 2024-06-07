@@ -29,21 +29,15 @@ mixin _$ChargerSpotsState {
   String? get selectedMarkerUuid => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ChargerSpotsStateCopyWith<ChargerSpotsState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ChargerSpotsStateCopyWith<ChargerSpotsState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ChargerSpotsStateCopyWith<$Res> {
-  factory $ChargerSpotsStateCopyWith(
-          ChargerSpotsState value, $Res Function(ChargerSpotsState) then) =
+  factory $ChargerSpotsStateCopyWith(ChargerSpotsState value, $Res Function(ChargerSpotsState) then) =
       _$ChargerSpotsStateCopyWithImpl<$Res, ChargerSpotsState>;
   @useResult
-  $Res call(
-      {bool isLoading,
-      Set<Marker> markers,
-      List<APIChargerSpot> chargerSpots,
-      String? selectedMarkerUuid});
+  $Res call({bool isLoading, Set<Marker> markers, List<APIChargerSpot> chargerSpots, String? selectedMarkerUuid});
 }
 
 /// @nodoc
@@ -86,26 +80,18 @@ class _$ChargerSpotsStateCopyWithImpl<$Res, $Val extends ChargerSpotsState>
 }
 
 /// @nodoc
-abstract class _$$ChargerSpotsStateImplCopyWith<$Res>
-    implements $ChargerSpotsStateCopyWith<$Res> {
-  factory _$$ChargerSpotsStateImplCopyWith(_$ChargerSpotsStateImpl value,
-          $Res Function(_$ChargerSpotsStateImpl) then) =
+abstract class _$$ChargerSpotsStateImplCopyWith<$Res> implements $ChargerSpotsStateCopyWith<$Res> {
+  factory _$$ChargerSpotsStateImplCopyWith(_$ChargerSpotsStateImpl value, $Res Function(_$ChargerSpotsStateImpl) then) =
       __$$ChargerSpotsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool isLoading,
-      Set<Marker> markers,
-      List<APIChargerSpot> chargerSpots,
-      String? selectedMarkerUuid});
+  $Res call({bool isLoading, Set<Marker> markers, List<APIChargerSpot> chargerSpots, String? selectedMarkerUuid});
 }
 
 /// @nodoc
-class __$$ChargerSpotsStateImplCopyWithImpl<$Res>
-    extends _$ChargerSpotsStateCopyWithImpl<$Res, _$ChargerSpotsStateImpl>
+class __$$ChargerSpotsStateImplCopyWithImpl<$Res> extends _$ChargerSpotsStateCopyWithImpl<$Res, _$ChargerSpotsStateImpl>
     implements _$$ChargerSpotsStateImplCopyWith<$Res> {
-  __$$ChargerSpotsStateImplCopyWithImpl(_$ChargerSpotsStateImpl _value,
-      $Res Function(_$ChargerSpotsStateImpl) _then)
+  __$$ChargerSpotsStateImplCopyWithImpl(_$ChargerSpotsStateImpl _value, $Res Function(_$ChargerSpotsStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -192,29 +178,22 @@ class _$ChargerSpotsStateImpl extends _ChargerSpotsState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChargerSpotsStateImpl &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading) &&
+            (identical(other.isLoading, isLoading) || other.isLoading == isLoading) &&
             const DeepCollectionEquality().equals(other._markers, _markers) &&
-            const DeepCollectionEquality()
-                .equals(other._chargerSpots, _chargerSpots) &&
+            const DeepCollectionEquality().equals(other._chargerSpots, _chargerSpots) &&
             (identical(other.selectedMarkerUuid, selectedMarkerUuid) ||
                 other.selectedMarkerUuid == selectedMarkerUuid));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      isLoading,
-      const DeepCollectionEquality().hash(_markers),
-      const DeepCollectionEquality().hash(_chargerSpots),
-      selectedMarkerUuid);
+  int get hashCode => Object.hash(runtimeType, isLoading, const DeepCollectionEquality().hash(_markers),
+      const DeepCollectionEquality().hash(_chargerSpots), selectedMarkerUuid);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChargerSpotsStateImplCopyWith<_$ChargerSpotsStateImpl> get copyWith =>
-      __$$ChargerSpotsStateImplCopyWithImpl<_$ChargerSpotsStateImpl>(
-          this, _$identity);
+      __$$ChargerSpotsStateImplCopyWithImpl<_$ChargerSpotsStateImpl>(this, _$identity);
 }
 
 abstract class _ChargerSpotsState extends ChargerSpotsState {
@@ -243,6 +222,5 @@ abstract class _ChargerSpotsState extends ChargerSpotsState {
   String? get selectedMarkerUuid;
   @override
   @JsonKey(ignore: true)
-  _$$ChargerSpotsStateImplCopyWith<_$ChargerSpotsStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ChargerSpotsStateImplCopyWith<_$ChargerSpotsStateImpl> get copyWith => throw _privateConstructorUsedError;
 }
