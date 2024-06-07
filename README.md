@@ -1,25 +1,18 @@
 # 準備
-APIキーをxx別管理にする運用にしています
-api_keysを何かしらで管理した上で以下のコマンドを実行
+APIキーをapi_keysという別ファイル管理にする運用にしています
+api_keysの中身は以下です
+```text
+SERVER_API_KEY=''
+GOOGLE_MAP_API_KEY=''
 ```
+
+以下のコマンドを実行しapi周りの準備をしてください
+`from`はapi_keysのファイルパス
+```bash
 cp from scripts/api_keys
 cd scripts
 bash prepare_api_keys.sh
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Flutter Coding Challenge
 
