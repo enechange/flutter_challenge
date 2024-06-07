@@ -1,3 +1,26 @@
+# 準備
+APIキーをxx別管理にする運用にしています
+api_keysを何かしらで管理した上で以下のコマンドを実行
+```
+cp from scripts/api_keys
+cd scripts
+bash prepare_api_keys.sh
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Flutter Coding Challenge
 
 ## Instructions
