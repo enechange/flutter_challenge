@@ -1,3 +1,19 @@
+# 準備
+APIキーをapi_keysという別ファイル管理にする運用にしています
+api_keysの形式は以下なので適当に変更してください
+```text
+SERVER_API_KEY=''
+GOOGLE_MAP_API_KEY=''
+```
+
+以下のコマンドを実行しapi周りの準備をしてください
+`from`はapi_keysのファイルパス
+```bash
+cp from scripts/api_keys
+cd scripts
+bash prepare_api_keys.sh
+```
+
 # Flutter Coding Challenge
 
 ## Instructions
@@ -63,7 +79,7 @@ Flutterで充電スポットマップ画面を作成してください。
 ### 充電スポット一覧API
 
 #### Repositoryクラス
-- API実行については [charger_spots_repository.dart](lib/charger_spots_repository.dart) を用意していますので、適宜ご活用ください
+- API実行については [charger_spots_repository.dart](lib/repository/charger_spots_repository.dart) を用意していますので、適宜ご活用ください
 
 #### API Keyの取得、設定
 - APIに必要な認証トークン `X-EVENE-NATIVE-API-TOKEN` は別途お伝えいたします
