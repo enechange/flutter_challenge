@@ -5,6 +5,7 @@ import 'package:flutter_map_app/screens/charger_spots/charger_spots_controller.d
 import 'package:flutter_map_app/screens/charger_spots/charger_spots_logic.dart';
 import 'package:flutter_map_app/screens/charger_spots/widgets/atom/search_charger_spots_item.dart';
 import 'package:flutter_map_app/screens/charger_spots/widgets/molecules/charger_spots_carousel.dart';
+import 'package:flutter_map_app/utils/determine_current_position.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -51,7 +52,7 @@ class ChargerSpotState extends ConsumerState<ChargerSpots> {
               _controller = controller;
               Position? currentPosition;
               try {
-                currentPosition = await Geolocator.getCurrentPosition();
+                currentPosition = await determinePosition();
               } catch (e) {
                 log(e.toString());
               }
@@ -90,9 +91,13 @@ class ChargerSpotState extends ConsumerState<ChargerSpots> {
                       padding: const EdgeInsets.only(right: 16),
                       child: GestureDetector(
                         onTap: () async {
-                          final currentLocation = await Geolocator.getCurrentPosition();
-                          _controller?.animateCamera(
-                              CameraUpdate.newLatLng(LatLng(currentLocation.latitude, currentLocation.longitude)));
+                          try {
+                            final currentLocation = await determinePosition();
+                            _controller?.animateCamera(
+                                CameraUpdate.newLatLng(LatLng(currentLocation.latitude, currentLocation.longitude)));
+                          } catch (e) {
+                            log(e.toString());
+                          }
                         },
                         child: Container(
                           height: 62,
