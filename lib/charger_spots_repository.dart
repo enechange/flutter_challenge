@@ -33,8 +33,8 @@ class GetChargerSpotsResponse {
 class ChargerSpotsRepository {
   ChargerSpotsRepository();
 
-  /// 再南西の座標（緯度[swLat]・経度[swLng]）と
-  /// 再北東の座標（緯度[neLat]・経度[neLng]）と
+  /// 最南西の座標（緯度[swLat]・経度[swLng]）と
+  /// 最北東の座標（緯度[neLat]・経度[neLng]）と
   /// 範囲内にある充電スポットを取得します。
   Future<GetChargerSpotsResponse> getChargerSpots({
     required double swLat,
